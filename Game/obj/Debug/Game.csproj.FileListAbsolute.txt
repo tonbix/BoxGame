@@ -1,0 +1,59 @@
+C:\Users\nik05\source\repos\Game\Game\bin\Debug\Game.exe.config
+C:\Users\nik05\source\repos\Game\Game\bin\Debug\Game.exe
+C:\Users\nik05\source\repos\Game\Game\bin\Debug\Game.pdb
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.exe
+C:\Users\nik05\source\repos\Game\Game\obj\Debug\Game.pdb
+C:\Users\ПК 8\source\repos\Game\Game\bin\Debug\Game.exe.config
+C:\Users\ПК 8\source\repos\Game\Game\bin\Debug\Game.exe
+C:\Users\ПК 8\source\repos\Game\Game\bin\Debug\Game.pdb
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.exe
+C:\Users\ПК 8\source\repos\Game\Game\obj\Debug\Game.pdb
+F:\uroch\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+F:\uroch\Game\Game\obj\Debug\Game.Form1.resources
+F:\uroch\Game\Game\obj\Debug\Game.Properties.Resources.resources
+F:\uroch\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+F:\uroch\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+F:\uroch\Game\Game\obj\Debug\Game.exe
+F:\uroch\Game\Game\obj\Debug\Game.pdb
+F:\uroch\Game\Game\bin\Debug\Game.exe.config
+F:\uroch\Game\Game\bin\Debug\Game.exe
+F:\uroch\Game\Game\bin\Debug\Game.pdb
+F:\uroch\Gamefinn\Game\bin\Debug\Game.exe.config
+F:\uroch\Gamefinn\Game\bin\Debug\Game.exe
+F:\uroch\Gamefinn\Game\bin\Debug\Game.pdb
+F:\uroch\Gamefinn\Game\obj\Debug\Game.csprojAssemblyReference.cache
+F:\uroch\Gamefinn\Game\obj\Debug\Game.Form1.resources
+F:\uroch\Gamefinn\Game\obj\Debug\Game.Properties.Resources.resources
+F:\uroch\Gamefinn\Game\obj\Debug\Game.csproj.GenerateResource.cache
+F:\uroch\Gamefinn\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+F:\uroch\Gamefinn\Game\obj\Debug\Game.exe
+F:\uroch\Gamefinn\Game\obj\Debug\Game.pdb
+C:\Users\nik05\source\repos\Gamefinn\Game\bin\Debug\Game.exe.config
+C:\Users\nik05\source\repos\Gamefinn\Game\bin\Debug\Game.exe
+C:\Users\nik05\source\repos\Gamefinn\Game\bin\Debug\Game.pdb
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.Form1.resources
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.exe
+C:\Users\nik05\source\repos\Gamefinn\Game\obj\Debug\Game.pdb
+D:\build356\Gamefinn\Game\bin\Debug\Game.exe.config
+D:\build356\Gamefinn\Game\bin\Debug\Game.exe
+D:\build356\Gamefinn\Game\bin\Debug\Game.pdb
+D:\build356\Gamefinn\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\build356\Gamefinn\Game\obj\Debug\Game.Form1.resources
+D:\build356\Gamefinn\Game\obj\Debug\Game.Properties.Resources.resources
+D:\build356\Gamefinn\Game\obj\Debug\Game.csproj.GenerateResource.cache
+D:\build356\Gamefinn\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\build356\Gamefinn\Game\obj\Debug\Game.exe
+D:\build356\Gamefinn\Game\obj\Debug\Game.pdb
