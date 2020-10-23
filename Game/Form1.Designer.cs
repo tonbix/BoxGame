@@ -61,6 +61,9 @@
             this.PipeDown = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.coin = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AllZero = new System.Windows.Forms.Button();
+            this.UnlimMoney = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.StartMenu.SuspendLayout();
             this.CustomizationMenu.SuspendLayout();
@@ -72,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -241,7 +245,7 @@
             this.CustomizationMenu.Controls.Add(this.Skin1);
             this.CustomizationMenu.Controls.Add(this.CustMenuCloseButton);
             this.CustomizationMenu.Controls.Add(this.CustMenuLabel);
-            this.CustomizationMenu.Location = new System.Drawing.Point(17, 12);
+            this.CustomizationMenu.Location = new System.Drawing.Point(17, -1000);
             this.CustomizationMenu.Name = "CustomizationMenu";
             this.CustomizationMenu.Size = new System.Drawing.Size(570, 380);
             this.CustomizationMenu.TabIndex = 15;
@@ -424,12 +428,43 @@
             this.coin.TabIndex = 12;
             this.coin.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.UnlimMoney);
+            this.panel1.Controls.Add(this.AllZero);
+            this.panel1.Location = new System.Drawing.Point(406, 310);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(199, 100);
+            this.panel1.TabIndex = 16;
+            // 
+            // AllZero
+            // 
+            this.AllZero.Location = new System.Drawing.Point(12, 9);
+            this.AllZero.Name = "AllZero";
+            this.AllZero.Size = new System.Drawing.Size(169, 36);
+            this.AllZero.TabIndex = 1;
+            this.AllZero.Text = "Все значения: 0";
+            this.AllZero.UseVisualStyleBackColor = true;
+            this.AllZero.Click += new System.EventHandler(this.AllZero_Click);
+            // 
+            // UnlimMoney
+            // 
+            this.UnlimMoney.Location = new System.Drawing.Point(12, 51);
+            this.UnlimMoney.Name = "UnlimMoney";
+            this.UnlimMoney.Size = new System.Drawing.Size(169, 36);
+            this.UnlimMoney.TabIndex = 2;
+            this.UnlimMoney.Text = "Деньги в займ";
+            this.UnlimMoney.UseVisualStyleBackColor = true;
+            this.UnlimMoney.Click += new System.EventHandler(this.UnlimMoney_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(599, 401);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.CustomizationMenu);
             this.Controls.Add(this.CoinCounter);
             this.Controls.Add(this.StartMenu);
@@ -459,6 +494,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,6 +533,9 @@
         private System.Windows.Forms.Label Skin3L;
         private System.Windows.Forms.Label Skin2L;
         private System.Windows.Forms.Label CoinsCountMenu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button UnlimMoney;
+        private System.Windows.Forms.Button AllZero;
     }
 }
 

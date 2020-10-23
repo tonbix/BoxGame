@@ -39,18 +39,35 @@ namespace Game
         public bool pause = false;
         public bool death = false;
         public int coinY = 440;
-        public int coinsCount = 1000;//кол-во монет (0)
+        public int coinsCount = 0;//кол-во монет (0)
         public int coinX = 110;
         public int skin = 1;
         public int coinSpawn = 1;
         public int skinNumber = 1;
 
-        public bool skin2B = false;
+        public bool skin2B = false;//купленные скины
         public bool skin3B = false;
         public bool skin4B = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.DataLoad();
+                if(skinNumber == 1)
+            {
+                this.Skin1Ch();
+            }
+                if (skinNumber == 2)
+            {
+                this.Skin2Ch();
+            }
+                if (skinNumber == 3)
+            {
+                this.Skin3Ch();
+            }
+                if (skinNumber == 4)
+            {
+                this.Skin4Ch();
+            }
             StartMenu.Top = 125;
             StartMenu.Visible = true;
             CoinCounter.Text = "Coins: " + coinsCount;
@@ -284,6 +301,7 @@ namespace Game
 
         private void CustomizationButton_Click(object sender, EventArgs e)
         {
+            CustomizationMenu.Top = 12;
             CustomizationMenu.Visible = true;
         }
 
@@ -299,44 +317,20 @@ namespace Game
 
         private void CustMenuCloseButton_Click(object sender, EventArgs e)
         {
+            CustomizationMenu.Top = -1000;
             CustomizationMenu.Visible = false;
         }
 
         private void Skin1_Click(object sender, EventArgs e)
         {
-            Player.Image = Game.Properties.Resources.Player;
-            skinNumber = 1;
-            Skin1L.Text = "Installed";
-            if(skin2B == true)
-            {
-                Skin2L.Text = "Uninstalled";
-            }
-            if (skin3B == true)
-            {
-                Skin3L.Text = "Uninstalled";
-            }
-            if (skin4B == true)
-            {
-                Skin4L.Text = "Uninstalled";
-            }
+            this.Skin1Ch();
         }
 
         private void Skin2_Click(object sender, EventArgs e)
         {
             if (skin2B == true)
             {
-                Player.Image = Game.Properties.Resources.AAAAAAAAAAAAAAAAAAA;
-                skinNumber = 2;
-                Skin2L.Text = "Installed";
-                Skin1L.Text = "Uninstalled";
-                if (skin3B == true)
-                {
-                    Skin3L.Text = "Uninstalled";
-                }
-                if (skin4B == true)
-                {
-                    Skin4L.Text = "Uninstalled";
-                }
+                this.Skin2Ch();
             }
             else if(coinsCount >= 10)
             {
@@ -352,18 +346,7 @@ namespace Game
         {
             if(skin3B == true)
             {
-                Player.Image = Game.Properties.Resources._60_оттенков_скителса;
-                skinNumber = 3;
-                Skin3L.Text = "Installed";
-                Skin1L.Text = "Uninstalled";
-                if (skin2B == true)
-                {
-                    Skin2L.Text = "Uninstalled";
-                }
-                if (skin4B == true)
-                {
-                    Skin4L.Text = "Uninstalled";
-                }
+                this.Skin3Ch();
             }
             else if (coinsCount >= 50)
             {
@@ -379,18 +362,7 @@ namespace Game
         {
             if(skin4B == true)
             {
-                Player.Image = Game.Properties.Resources.котек;
-                skinNumber = 4;
-                Skin4L.Text = "Installed";
-                Skin1L.Text = "Uninstalled";
-                if (skin2B == true)
-                {
-                    Skin2L.Text = "Uninstalled";
-                }
-                if (skin3B == true)
-                {
-                    Skin3L.Text = "Uninstalled";
-                }
+                this.Skin4Ch();
             }
             else if (coinsCount >= 25)
             {
@@ -404,10 +376,114 @@ namespace Game
 
         private void DataSave()
         {
-            FileStream file = File.Create(@"./save.txt");
-            byte[] text = Encoding.UTF8.GetBytes(coinsCount + "/r/n" + skinNumber + "/r/n" + bestScore + "/r/n" + skin2B + "/r/n" + skin3B + "/r/n" + skin4B);
-            file.Write(text, 0, text.Length);
-            file.Close();
+            /*FileStream file = File.Create(@"./save.txt");
+            byte[] text = Encoding.UTF8.GetBytes(coinsCount + "\r\n" + skinNumber + "\r\n" + bestScore + "\r\n" + skin2B + "\r\n" + skin3B + "\r\n" + skin4B);
+            file.Write(text, 0, text.Length);*/
+            //file.Close();
+            using (var stream = new FileStream("save.bin", FileMode.Create, FileAccess.Write, FileShare.None))
+            using (var writer = new BinaryWriter(stream))
+            {
+                writer.Write(coinsCount);
+                writer.Write(skinNumber);
+                writer.Write(bestScore);
+                writer.Write(skin2B);
+                writer.Write(skin3B);
+                writer.Write(skin4B);
+            }
+        }
+        private void DataLoad()
+        {
+            var array = new int[] { coinsCount, skinNumber, bestScore, Convert.ToInt32(skin2B), Convert.ToInt32(skin3B), Convert.ToInt32(skin4B) };
+            using (var stream = new FileStream("save.bin", FileMode.Open, FileAccess.Read, FileShare.None))
+            using (var reader = new BinaryReader(stream))
+            {
+                coinsCount = reader.ReadInt32();
+                skinNumber = reader.ReadInt32();
+                bestScore = reader.ReadInt32();
+                skin2B = reader.ReadBoolean();
+                skin3B = reader.ReadBoolean();
+                skin4B = reader.ReadBoolean();
+            }
+        }
+        private void Skin1Ch()
+        {
+            Player.Image = Game.Properties.Resources.Player;
+            skinNumber = 1;
+            Skin1L.Text = "Installed";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+        }
+        private void Skin2Ch()
+        {
+            Player.Image = Game.Properties.Resources.AAAAAAAAAAAAAAAAAAA;
+            skinNumber = 2;
+            Skin2L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+        }
+        private void Skin3Ch()
+        {
+            Player.Image = Game.Properties.Resources._60_оттенков_скителса;
+            skinNumber = 3;
+            Skin3L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+        }
+        private void Skin4Ch()
+        {
+            Player.Image = Game.Properties.Resources.котек;
+            skinNumber = 4;
+            Skin4L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+        }
+
+        private void AllZero_Click(object sender, EventArgs e)
+        {
+            coinsCount = 0;
+            bestScore = 0;
+            score = 0;
+            skin2B = false;
+            skin3B = false;
+            skin4B = false;
+            this.Skin1Ch();
+        }
+
+        private void UnlimMoney_Click(object sender, EventArgs e)
+        {
+            coinsCount = 99999;
+            CoinCounter.Text = "Coins: " + coinsCount;
         }
     }
 }
