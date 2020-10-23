@@ -38,7 +38,7 @@ namespace Game
         public bool pause = false;
         public bool death = false;
         public int coinY = 440;
-        public int coinsCount = 99;
+        public int coinsCount = 0;//кол-во монет (0)
         public int coinX = 110;
         public int skin = 1;
         public int coinSpawn = 1;
