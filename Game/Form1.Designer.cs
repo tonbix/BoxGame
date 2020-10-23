@@ -45,6 +45,7 @@
             this.TitleSM = new System.Windows.Forms.Label();
             this.CoinCounter = new System.Windows.Forms.Label();
             this.CustomizationMenu = new System.Windows.Forms.Panel();
+            this.CoinsCountMenu = new System.Windows.Forms.Label();
             this.Skin4L = new System.Windows.Forms.Label();
             this.Skin3L = new System.Windows.Forms.Label();
             this.Skin2L = new System.Windows.Forms.Label();
@@ -60,7 +61,6 @@
             this.PipeDown = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.coin = new System.Windows.Forms.PictureBox();
-            this.CoinsCountMenu = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
             this.StartMenu.SuspendLayout();
             this.CustomizationMenu.SuspendLayout();
@@ -247,6 +247,15 @@
             this.CustomizationMenu.TabIndex = 15;
             this.CustomizationMenu.Visible = false;
             // 
+            // CoinsCountMenu
+            // 
+            this.CoinsCountMenu.AutoSize = true;
+            this.CoinsCountMenu.Location = new System.Drawing.Point(24, 39);
+            this.CoinsCountMenu.Name = "CoinsCountMenu";
+            this.CoinsCountMenu.Size = new System.Drawing.Size(39, 13);
+            this.CoinsCountMenu.TabIndex = 24;
+            this.CoinsCountMenu.Text = "Coins: ";
+            // 
             // Skin4L
             // 
             this.Skin4L.AutoSize = true;
@@ -414,15 +423,6 @@
             this.coin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.coin.TabIndex = 12;
             this.coin.TabStop = false;
-            // 
-            // CoinsCountMenu
-            // 
-            this.CoinsCountMenu.AutoSize = true;
-            this.CoinsCountMenu.Location = new System.Drawing.Point(24, 39);
-            this.CoinsCountMenu.Name = "CoinsCountMenu";
-            this.CoinsCountMenu.Size = new System.Drawing.Size(39, 13);
-            this.CoinsCountMenu.TabIndex = 24;
-            this.CoinsCountMenu.Text = "Coins: ";
             // 
             // Form1
             // 

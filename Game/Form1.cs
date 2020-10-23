@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Game
@@ -38,14 +39,11 @@ namespace Game
         public bool pause = false;
         public bool death = false;
         public int coinY = 440;
-        public int coinsCount = 0;//кол-во монет (0)
+        public int coinsCount = 1000;//кол-во монет (0)
         public int coinX = 110;
         public int skin = 1;
         public int coinSpawn = 1;
-        public bool skin1I = true;
-        public bool skin2I = false;
-        public bool skin3I = false;
-        public bool skin4I = false;
+        public int skinNumber = 1;
 
         public bool skin2B = false;
         public bool skin3B = false;
@@ -237,6 +235,7 @@ namespace Game
         private void CloseButton_Click(object sender, EventArgs e)//menu close button 
         {
             this.Close();
+            this.DataSave();
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -306,7 +305,7 @@ namespace Game
         private void Skin1_Click(object sender, EventArgs e)
         {
             Player.Image = Game.Properties.Resources.Player;
-            skin1I = true;
+            skinNumber = 1;
             Skin1L.Text = "Installed";
             if(skin2B == true)
             {
@@ -327,7 +326,7 @@ namespace Game
             if (skin2B == true)
             {
                 Player.Image = Game.Properties.Resources.AAAAAAAAAAAAAAAAAAA;
-                skin2I = true;
+                skinNumber = 2;
                 Skin2L.Text = "Installed";
                 Skin1L.Text = "Uninstalled";
                 if (skin3B == true)
@@ -354,7 +353,7 @@ namespace Game
             if(skin3B == true)
             {
                 Player.Image = Game.Properties.Resources._60_оттенков_скителса;
-                skin3I = true;
+                skinNumber = 3;
                 Skin3L.Text = "Installed";
                 Skin1L.Text = "Uninstalled";
                 if (skin2B == true)
@@ -381,7 +380,7 @@ namespace Game
             if(skin4B == true)
             {
                 Player.Image = Game.Properties.Resources.котек;
-                skin4I = true;
+                skinNumber = 4;
                 Skin4L.Text = "Installed";
                 Skin1L.Text = "Uninstalled";
                 if (skin2B == true)
@@ -401,6 +400,14 @@ namespace Game
                 CoinCounter.Text = "Coins: " + coinsCount;
                 CoinsCountMenu.Text = "Coins: " + coinsCount;
             }
+        }
+
+        private void DataSave()
+        {
+            FileStream file = File.Create(@"./save.txt");
+            byte[] text = Encoding.UTF8.GetBytes(coinsCount + "/r/n" + skinNumber + "/r/n" + bestScore + "/r/n" + skin2B + "/r/n" + skin3B + "/r/n" + skin4B);
+            file.Write(text, 0, text.Length);
+            file.Close();
         }
     }
 }

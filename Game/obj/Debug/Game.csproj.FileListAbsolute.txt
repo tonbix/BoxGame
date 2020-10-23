@@ -57,3 +57,13 @@ D:\build356\Gamefinn\Game\obj\Debug\Game.csproj.GenerateResource.cache
 D:\build356\Gamefinn\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 D:\build356\Gamefinn\Game\obj\Debug\Game.exe
 D:\build356\Gamefinn\Game\obj\Debug\Game.pdb
+C:\Users\nik05\source\repos\BoxGame\Game\bin\Debug\Game.exe.config
+C:\Users\nik05\source\repos\BoxGame\Game\bin\Debug\Game.exe
+C:\Users\nik05\source\repos\BoxGame\Game\bin\Debug\Game.pdb
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.Form1.resources
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.exe
+C:\Users\nik05\source\repos\BoxGame\Game\obj\Debug\Game.pdb
