@@ -61,9 +61,10 @@
             this.PipeDown = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.coin = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.CheatMenu = new System.Windows.Forms.Panel();
             this.AllZero = new System.Windows.Forms.Button();
             this.UnlimMoney = new System.Windows.Forms.Button();
+            this.SpeedUpL = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
             this.StartMenu.SuspendLayout();
             this.CustomizationMenu.SuspendLayout();
@@ -75,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.CheatMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -428,15 +429,15 @@
             this.coin.TabIndex = 12;
             this.coin.TabStop = false;
             // 
-            // panel1
+            // CheatMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.UnlimMoney);
-            this.panel1.Controls.Add(this.AllZero);
-            this.panel1.Location = new System.Drawing.Point(406, 310);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(199, 100);
-            this.panel1.TabIndex = 16;
+            this.CheatMenu.BackColor = System.Drawing.Color.White;
+            this.CheatMenu.Controls.Add(this.UnlimMoney);
+            this.CheatMenu.Controls.Add(this.AllZero);
+            this.CheatMenu.Location = new System.Drawing.Point(406, -310);
+            this.CheatMenu.Name = "CheatMenu";
+            this.CheatMenu.Size = new System.Drawing.Size(199, 100);
+            this.CheatMenu.TabIndex = 16;
             // 
             // AllZero
             // 
@@ -458,13 +459,26 @@
             this.UnlimMoney.UseVisualStyleBackColor = true;
             this.UnlimMoney.Click += new System.EventHandler(this.UnlimMoney_Click);
             // 
+            // SpeedUpL
+            // 
+            this.SpeedUpL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SpeedUpL.AutoSize = true;
+            this.SpeedUpL.BackColor = System.Drawing.Color.White;
+            this.SpeedUpL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpeedUpL.Location = new System.Drawing.Point(250, 2000);
+            this.SpeedUpL.Name = "SpeedUpL";
+            this.SpeedUpL.Size = new System.Drawing.Size(117, 24);
+            this.SpeedUpL.TabIndex = 17;
+            this.SpeedUpL.Text = "SPEED UP!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(599, 401);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SpeedUpL);
+            this.Controls.Add(this.CheatMenu);
             this.Controls.Add(this.CustomizationMenu);
             this.Controls.Add(this.CoinCounter);
             this.Controls.Add(this.StartMenu);
@@ -479,6 +493,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Odnoklassniki travel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -494,7 +509,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.CheatMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,9 +548,10 @@
         private System.Windows.Forms.Label Skin3L;
         private System.Windows.Forms.Label Skin2L;
         private System.Windows.Forms.Label CoinsCountMenu;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel CheatMenu;
         private System.Windows.Forms.Button UnlimMoney;
         private System.Windows.Forms.Button AllZero;
+        private System.Windows.Forms.Label SpeedUpL;
     }
 }
 

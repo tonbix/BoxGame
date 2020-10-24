@@ -44,6 +44,7 @@ namespace Game
         public int skin = 1;
         public int coinSpawn = 1;
         public int skinNumber = 1;
+        public int SpeedUpTime = 0;
 
         public bool skin2B = false;//купленные скины
         public bool skin3B = false;
@@ -54,20 +55,25 @@ namespace Game
             this.DataLoad();
                 if(skinNumber == 1)
             {
+
                 this.Skin1Ch();
             }
+
                 if (skinNumber == 2)
             {
                 this.Skin2Ch();
             }
+
                 if (skinNumber == 3)
             {
                 this.Skin3Ch();
             }
+
                 if (skinNumber == 4)
             {
                 this.Skin4Ch();
             }
+
             StartMenu.Top = 125;
             StartMenu.Visible = true;
             CoinCounter.Text = "Coins: " + coinsCount;
@@ -102,8 +108,13 @@ namespace Game
         
         private void timer1_Tick(object sender, EventArgs e)
         {//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//START//
-            
-           //variable
+            if (SpeedUpTime == 0)
+            {
+                SpeedUpL.Top = 2000;
+                SpeedUpL.Left = 250;
+            }
+            SpeedUpTime--;
+            //variable
             bool intersectedUp = Player.Bounds.IntersectsWith(PipeUp.Bounds);
             bool intersectedDown = Player.Bounds.IntersectsWith(PipeDown.Bounds);
             bool intersectedCoin = Player.Bounds.IntersectsWith(coin.Bounds);
@@ -140,12 +151,14 @@ namespace Game
                 {
                     bestScore = score;
                 }
-
                 if(score1 == speedAcc)
                 {
                     stepPipe += 2;
                     speedAcc += 15;
                     score1 = 0;
+                    SpeedUpL.Top = 200;
+                    SpeedUpL.Left = 250;
+                    SpeedUpTime = 50;
                 }
             }
 
@@ -303,6 +316,7 @@ namespace Game
         {
             CustomizationMenu.Top = 12;
             CustomizationMenu.Visible = true;
+            CoinsCountMenu.Text = "Coins " + coinsCount;
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -414,13 +428,25 @@ namespace Game
             {
                 Skin2L.Text = "Uninstalled";
             }
+            else
+            {
+                Skin2L.Text = "Buy: 10";
+            }
             if (skin3B == true)
             {
                 Skin3L.Text = "Uninstalled";
             }
+            else
+            {
+                Skin3L.Text = "Buy: 50";
+            }
             if (skin4B == true)
             {
                 Skin4L.Text = "Uninstalled";
+            }
+            else
+            {
+                Skin4L.Text = "Buy: 25";
             }
         }
         private void Skin2Ch()
@@ -478,12 +504,18 @@ namespace Game
             skin3B = false;
             skin4B = false;
             this.Skin1Ch();
+            CoinCounter.Text = "Coins: " + coinsCount;
         }
 
         private void UnlimMoney_Click(object sender, EventArgs e)
         {
             coinsCount = 99999;
             CoinCounter.Text = "Coins: " + coinsCount;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.DataSave();
         }
     }
 }
