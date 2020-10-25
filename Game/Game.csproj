@@ -110,5 +110,23 @@
   <ItemGroup>
     <None Include="Resources\AAAAAAAAAAAAAAAAAAA.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Шакал.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\СмайликВк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Priora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainbow.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepe_dance.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

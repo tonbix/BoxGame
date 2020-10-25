@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Score = new System.Windows.Forms.Label();
             this.Menu = new System.Windows.Forms.Panel();
@@ -45,6 +46,14 @@
             this.TitleSM = new System.Windows.Forms.Label();
             this.CoinCounter = new System.Windows.Forms.Label();
             this.CustomizationMenu = new System.Windows.Forms.Panel();
+            this.Skin8L = new System.Windows.Forms.Label();
+            this.Skin8 = new System.Windows.Forms.PictureBox();
+            this.Skin7L = new System.Windows.Forms.Label();
+            this.Skin7 = new System.Windows.Forms.PictureBox();
+            this.Skin6L = new System.Windows.Forms.Label();
+            this.Skin6 = new System.Windows.Forms.PictureBox();
+            this.Skin5L = new System.Windows.Forms.Label();
+            this.Skin5 = new System.Windows.Forms.PictureBox();
             this.CoinsCountMenu = new System.Windows.Forms.Label();
             this.Skin4L = new System.Windows.Forms.Label();
             this.Skin3L = new System.Windows.Forms.Label();
@@ -56,27 +65,31 @@
             this.Skin1 = new System.Windows.Forms.PictureBox();
             this.CustMenuCloseButton = new System.Windows.Forms.Button();
             this.CustMenuLabel = new System.Windows.Forms.Label();
+            this.CheatMenu = new System.Windows.Forms.Panel();
+            this.UnlimMoney = new System.Windows.Forms.Button();
+            this.AllZero = new System.Windows.Forms.Button();
+            this.SpeedUpL = new System.Windows.Forms.Label();
             this.PauseButton = new System.Windows.Forms.Button();
             this.PipeUp = new System.Windows.Forms.PictureBox();
             this.PipeDown = new System.Windows.Forms.PictureBox();
             this.Player = new System.Windows.Forms.PictureBox();
             this.coin = new System.Windows.Forms.PictureBox();
-            this.CheatMenu = new System.Windows.Forms.Panel();
-            this.AllZero = new System.Windows.Forms.Button();
-            this.UnlimMoney = new System.Windows.Forms.Button();
-            this.SpeedUpL = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
             this.StartMenu.SuspendLayout();
             this.CustomizationMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin1)).BeginInit();
+            this.CheatMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PipeUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).BeginInit();
-            this.CheatMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -235,6 +248,14 @@
             // CustomizationMenu
             // 
             this.CustomizationMenu.BackColor = System.Drawing.Color.White;
+            this.CustomizationMenu.Controls.Add(this.Skin8L);
+            this.CustomizationMenu.Controls.Add(this.Skin8);
+            this.CustomizationMenu.Controls.Add(this.Skin7L);
+            this.CustomizationMenu.Controls.Add(this.Skin7);
+            this.CustomizationMenu.Controls.Add(this.Skin6L);
+            this.CustomizationMenu.Controls.Add(this.Skin6);
+            this.CustomizationMenu.Controls.Add(this.Skin5L);
+            this.CustomizationMenu.Controls.Add(this.Skin5);
             this.CustomizationMenu.Controls.Add(this.CoinsCountMenu);
             this.CustomizationMenu.Controls.Add(this.Skin4L);
             this.CustomizationMenu.Controls.Add(this.Skin3L);
@@ -246,11 +267,100 @@
             this.CustomizationMenu.Controls.Add(this.Skin1);
             this.CustomizationMenu.Controls.Add(this.CustMenuCloseButton);
             this.CustomizationMenu.Controls.Add(this.CustMenuLabel);
-            this.CustomizationMenu.Location = new System.Drawing.Point(17, -1000);
+            this.CustomizationMenu.Location = new System.Drawing.Point(17, -1200);
             this.CustomizationMenu.Name = "CustomizationMenu";
             this.CustomizationMenu.Size = new System.Drawing.Size(570, 380);
             this.CustomizationMenu.TabIndex = 15;
             this.CustomizationMenu.Visible = false;
+            // 
+            // Skin8L
+            // 
+            this.Skin8L.AutoSize = true;
+            this.Skin8L.Location = new System.Drawing.Point(242, 216);
+            this.Skin8L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Skin8L.Name = "Skin8L";
+            this.Skin8L.Size = new System.Drawing.Size(77, 13);
+            this.Skin8L.TabIndex = 32;
+            this.Skin8L.Text = "Buy: 100 coins";
+            // 
+            // Skin8
+            // 
+            this.Skin8.BackColor = System.Drawing.Color.SlateGray;
+            this.Skin8.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Skin8.Image = ((System.Drawing.Image)(resources.GetObject("Skin8.Image")));
+            this.Skin8.Location = new System.Drawing.Point(245, 158);
+            this.Skin8.Name = "Skin8";
+            this.Skin8.Size = new System.Drawing.Size(70, 55);
+            this.Skin8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skin8.TabIndex = 31;
+            this.Skin8.TabStop = false;
+            this.Skin8.Click += new System.EventHandler(this.Skin8_Click);
+            // 
+            // Skin7L
+            // 
+            this.Skin7L.AutoSize = true;
+            this.Skin7L.Location = new System.Drawing.Point(166, 216);
+            this.Skin7L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Skin7L.Name = "Skin7L";
+            this.Skin7L.Size = new System.Drawing.Size(71, 13);
+            this.Skin7L.TabIndex = 30;
+            this.Skin7L.Text = "Buy: 50 coins";
+            // 
+            // Skin7
+            // 
+            this.Skin7.BackColor = System.Drawing.Color.SlateGray;
+            this.Skin7.Image = global::Game.Properties.Resources.Шакал;
+            this.Skin7.Location = new System.Drawing.Point(169, 158);
+            this.Skin7.Name = "Skin7";
+            this.Skin7.Size = new System.Drawing.Size(70, 55);
+            this.Skin7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skin7.TabIndex = 29;
+            this.Skin7.TabStop = false;
+            this.Skin7.Click += new System.EventHandler(this.Skin7_Click);
+            // 
+            // Skin6L
+            // 
+            this.Skin6L.AutoSize = true;
+            this.Skin6L.Location = new System.Drawing.Point(90, 216);
+            this.Skin6L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Skin6L.Name = "Skin6L";
+            this.Skin6L.Size = new System.Drawing.Size(71, 13);
+            this.Skin6L.TabIndex = 28;
+            this.Skin6L.Text = "Buy: 75 coins";
+            // 
+            // Skin6
+            // 
+            this.Skin6.BackColor = System.Drawing.Color.SlateGray;
+            this.Skin6.Image = global::Game.Properties.Resources.СмайликВк;
+            this.Skin6.Location = new System.Drawing.Point(93, 158);
+            this.Skin6.Name = "Skin6";
+            this.Skin6.Size = new System.Drawing.Size(70, 55);
+            this.Skin6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skin6.TabIndex = 27;
+            this.Skin6.TabStop = false;
+            this.Skin6.Click += new System.EventHandler(this.Skin6_Click);
+            // 
+            // Skin5L
+            // 
+            this.Skin5L.AutoSize = true;
+            this.Skin5L.Location = new System.Drawing.Point(12, 216);
+            this.Skin5L.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Skin5L.Name = "Skin5L";
+            this.Skin5L.Size = new System.Drawing.Size(71, 13);
+            this.Skin5L.TabIndex = 26;
+            this.Skin5L.Text = "Buy: 75 coins";
+            // 
+            // Skin5
+            // 
+            this.Skin5.BackColor = System.Drawing.Color.SlateGray;
+            this.Skin5.Image = global::Game.Properties.Resources.spider;
+            this.Skin5.Location = new System.Drawing.Point(15, 158);
+            this.Skin5.Name = "Skin5";
+            this.Skin5.Size = new System.Drawing.Size(70, 55);
+            this.Skin5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skin5.TabIndex = 25;
+            this.Skin5.TabStop = false;
+            this.Skin5.Click += new System.EventHandler(this.Skin5_Click);
             // 
             // CoinsCountMenu
             // 
@@ -372,6 +482,48 @@
             this.CustMenuLabel.TabIndex = 0;
             this.CustMenuLabel.Text = "Customization";
             // 
+            // CheatMenu
+            // 
+            this.CheatMenu.BackColor = System.Drawing.Color.White;
+            this.CheatMenu.Controls.Add(this.UnlimMoney);
+            this.CheatMenu.Controls.Add(this.AllZero);
+            this.CheatMenu.Location = new System.Drawing.Point(477, 336);
+            this.CheatMenu.Name = "CheatMenu";
+            this.CheatMenu.Size = new System.Drawing.Size(115, 53);
+            this.CheatMenu.TabIndex = 16;
+            // 
+            // UnlimMoney
+            // 
+            this.UnlimMoney.Location = new System.Drawing.Point(3, 28);
+            this.UnlimMoney.Name = "UnlimMoney";
+            this.UnlimMoney.Size = new System.Drawing.Size(110, 20);
+            this.UnlimMoney.TabIndex = 2;
+            this.UnlimMoney.Text = "Деньги в займ";
+            this.UnlimMoney.UseVisualStyleBackColor = true;
+            this.UnlimMoney.Click += new System.EventHandler(this.UnlimMoney_Click);
+            // 
+            // AllZero
+            // 
+            this.AllZero.Location = new System.Drawing.Point(3, 3);
+            this.AllZero.Name = "AllZero";
+            this.AllZero.Size = new System.Drawing.Size(110, 19);
+            this.AllZero.TabIndex = 1;
+            this.AllZero.Text = "Все значения: 0";
+            this.AllZero.UseVisualStyleBackColor = true;
+            this.AllZero.Click += new System.EventHandler(this.AllZero_Click);
+            // 
+            // SpeedUpL
+            // 
+            this.SpeedUpL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SpeedUpL.AutoSize = true;
+            this.SpeedUpL.BackColor = System.Drawing.Color.White;
+            this.SpeedUpL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SpeedUpL.Location = new System.Drawing.Point(250, 2000);
+            this.SpeedUpL.Name = "SpeedUpL";
+            this.SpeedUpL.Size = new System.Drawing.Size(117, 24);
+            this.SpeedUpL.TabIndex = 17;
+            this.SpeedUpL.Text = "SPEED UP!";
+            // 
             // PauseButton
             // 
             this.PauseButton.BackColor = System.Drawing.Color.White;
@@ -429,48 +581,6 @@
             this.coin.TabIndex = 12;
             this.coin.TabStop = false;
             // 
-            // CheatMenu
-            // 
-            this.CheatMenu.BackColor = System.Drawing.Color.White;
-            this.CheatMenu.Controls.Add(this.UnlimMoney);
-            this.CheatMenu.Controls.Add(this.AllZero);
-            this.CheatMenu.Location = new System.Drawing.Point(406, -310);
-            this.CheatMenu.Name = "CheatMenu";
-            this.CheatMenu.Size = new System.Drawing.Size(199, 100);
-            this.CheatMenu.TabIndex = 16;
-            // 
-            // AllZero
-            // 
-            this.AllZero.Location = new System.Drawing.Point(12, 9);
-            this.AllZero.Name = "AllZero";
-            this.AllZero.Size = new System.Drawing.Size(169, 36);
-            this.AllZero.TabIndex = 1;
-            this.AllZero.Text = "Все значения: 0";
-            this.AllZero.UseVisualStyleBackColor = true;
-            this.AllZero.Click += new System.EventHandler(this.AllZero_Click);
-            // 
-            // UnlimMoney
-            // 
-            this.UnlimMoney.Location = new System.Drawing.Point(12, 51);
-            this.UnlimMoney.Name = "UnlimMoney";
-            this.UnlimMoney.Size = new System.Drawing.Size(169, 36);
-            this.UnlimMoney.TabIndex = 2;
-            this.UnlimMoney.Text = "Деньги в займ";
-            this.UnlimMoney.UseVisualStyleBackColor = true;
-            this.UnlimMoney.Click += new System.EventHandler(this.UnlimMoney_Click);
-            // 
-            // SpeedUpL
-            // 
-            this.SpeedUpL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SpeedUpL.AutoSize = true;
-            this.SpeedUpL.BackColor = System.Drawing.Color.White;
-            this.SpeedUpL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SpeedUpL.Location = new System.Drawing.Point(250, 2000);
-            this.SpeedUpL.Name = "SpeedUpL";
-            this.SpeedUpL.Size = new System.Drawing.Size(117, 24);
-            this.SpeedUpL.TabIndex = 17;
-            this.SpeedUpL.Text = "SPEED UP!";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -501,15 +611,19 @@
             this.StartMenu.ResumeLayout(false);
             this.CustomizationMenu.ResumeLayout(false);
             this.CustomizationMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skin5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Skin1)).EndInit();
+            this.CheatMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PipeUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PipeDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coin)).EndInit();
-            this.CheatMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -552,6 +666,14 @@
         private System.Windows.Forms.Button UnlimMoney;
         private System.Windows.Forms.Button AllZero;
         private System.Windows.Forms.Label SpeedUpL;
+        private System.Windows.Forms.Label Skin5L;
+        private System.Windows.Forms.PictureBox Skin5;
+        private System.Windows.Forms.Label Skin8L;
+        private System.Windows.Forms.PictureBox Skin8;
+        private System.Windows.Forms.Label Skin7L;
+        private System.Windows.Forms.PictureBox Skin7;
+        private System.Windows.Forms.Label Skin6L;
+        private System.Windows.Forms.PictureBox Skin6;
     }
 }
 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Net.Http.Headers;
 
 namespace Game
 {
@@ -49,7 +50,10 @@ namespace Game
         public bool skin2B = false;//купленные скины
         public bool skin3B = false;
         public bool skin4B = false;
-
+        public bool skin5B = false;
+        public bool skin6B = false;
+        public bool skin7B = false;
+        public bool skin8B = false;
         private void Form1_Load(object sender, EventArgs e)
         {
             this.DataLoad();
@@ -388,6 +392,70 @@ namespace Game
             }
         }
 
+        private void Skin5_Click(object sender, EventArgs e)
+        {
+            if (skin5B == true)
+            {
+                this.Skin5Ch();
+            }
+            else if (coinsCount >= 75)
+            {
+                skin5B = true;
+                Skin5L.Text = "Uninstalled";
+                coinsCount -= 75;
+                CoinCounter.Text = "Coins: " + coinsCount;
+                CoinsCountMenu.Text = "Coins: " + coinsCount;
+            }
+        }
+
+        private void Skin6_Click(object sender, EventArgs e)
+        {
+            if (skin6B == true)
+            {
+                this.Skin6Ch();
+            }
+            else if (coinsCount >= 75)
+            {
+                skin6B = true;
+                Skin6L.Text = "Uninstalled";
+                coinsCount -= 75;
+                CoinCounter.Text = "Coins: " + coinsCount;
+                CoinsCountMenu.Text = "Coins: " + coinsCount;
+            }
+        }
+
+        private void Skin7_Click(object sender, EventArgs e)
+        {
+            if (skin7B == true)
+            {
+                this.Skin7Ch();
+            }
+            else if (coinsCount >= 50)
+            {
+                skin5B = true;
+                Skin5L.Text = "Uninstalled";
+                coinsCount -= 75;
+                CoinCounter.Text = "Coins: " + coinsCount;
+                CoinsCountMenu.Text = "Coins: " + coinsCount;
+            }
+        }
+
+        private void Skin8_Click(object sender, EventArgs e)
+        {
+            if (skin8B == true)
+            {
+                this.Skin8Ch();
+            }
+            else if (coinsCount >= 100)
+            {
+                skin8B = true;
+                Skin8L.Text = "Uninstalled";
+                coinsCount -= 100;
+                CoinCounter.Text = "Coins: " + coinsCount;
+                CoinsCountMenu.Text = "Coins: " + coinsCount;
+            }
+        }
+
         private void DataSave()
         {
             /*FileStream file = File.Create(@"./save.txt");
@@ -397,12 +465,18 @@ namespace Game
             using (var stream = new FileStream("save.bin", FileMode.Create, FileAccess.Write, FileShare.None))
             using (var writer = new BinaryWriter(stream))
             {
+                writer.Write(-1);
+                writer.Write(2);
                 writer.Write(coinsCount);
                 writer.Write(skinNumber);
                 writer.Write(bestScore);
                 writer.Write(skin2B);
                 writer.Write(skin3B);
                 writer.Write(skin4B);
+                writer.Write(skin5B);
+                writer.Write(skin6B);
+                writer.Write(skin7B);
+                writer.Write(skin8B);
             }
         }
         private void DataLoad()
@@ -411,12 +485,25 @@ namespace Game
             using (var stream = new FileStream("save.bin", FileMode.Open, FileAccess.Read, FileShare.None))
             using (var reader = new BinaryReader(stream))
             {
+                var version = 1;
                 coinsCount = reader.ReadInt32();
+                if (coinsCount == -1)
+                {
+                    version = reader.ReadInt32();
+                    coinsCount = reader.ReadInt32();
+                }
                 skinNumber = reader.ReadInt32();
                 bestScore = reader.ReadInt32();
                 skin2B = reader.ReadBoolean();
                 skin3B = reader.ReadBoolean();
                 skin4B = reader.ReadBoolean();
+                if(version >= 2)
+                {
+                    skin5B = reader.ReadBoolean();
+                    skin6B = reader.ReadBoolean();
+                    skin7B = reader.ReadBoolean();
+                    skin8B = reader.ReadBoolean();
+                }
             }
         }
         private void Skin1Ch()
@@ -448,6 +535,38 @@ namespace Game
             {
                 Skin4L.Text = "Buy: 25";
             }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            else
+            {
+                Skin5L.Text = "Buy: 75";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            else
+            {
+                Skin6L.Text = "Buy: 75";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            else
+            {
+                Skin7L.Text = "Buy: 50";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
+            else
+            {
+                Skin8L.Text = "Buy: 100";
+            }
         }
         private void Skin2Ch()
         {
@@ -462,6 +581,22 @@ namespace Game
             if (skin4B == true)
             {
                 Skin4L.Text = "Uninstalled";
+            }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
             }
         }
         private void Skin3Ch()
@@ -478,6 +613,22 @@ namespace Game
             {
                 Skin4L.Text = "Uninstalled";
             }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
         }
         private void Skin4Ch()
         {
@@ -493,6 +644,146 @@ namespace Game
             {
                 Skin3L.Text = "Uninstalled";
             }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
+        }
+        private void Skin5Ch()
+        {
+            Player.Image = Game.Properties.Resources.spider;
+            skinNumber = 5;
+            Skin5L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
+        }
+        private void Skin6Ch()
+        {
+            Player.Image = Game.Properties.Resources.СмайликВк;
+            skinNumber = 6;
+            Skin6L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
+        }
+        private void Skin7Ch()
+        {
+            Player.Image = Game.Properties.Resources.Шакал;
+            skinNumber = 7;
+            Skin7L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin8B == true)
+            {
+                Skin8L.Text = "Uninstalled";
+            }
+        }
+        private void Skin8Ch()
+        {
+            Player.Image = Game.Properties.Resources.pepe_dance;
+            skinNumber = 8;
+            Skin8L.Text = "Installed";
+            Skin1L.Text = "Uninstalled";
+            if (skin2B == true)
+            {
+                Skin2L.Text = "Uninstalled";
+            }
+            if (skin3B == true)
+            {
+                Skin3L.Text = "Uninstalled";
+            }
+            if (skin4B == true)
+            {
+                Skin4L.Text = "Uninstalled";
+            }
+            if (skin5B == true)
+            {
+                Skin5L.Text = "Uninstalled";
+            }
+            if (skin6B == true)
+            {
+                Skin6L.Text = "Uninstalled";
+            }
+            if (skin7B == true)
+            {
+                Skin7L.Text = "Uninstalled";
+            }
         }
 
         private void AllZero_Click(object sender, EventArgs e)
@@ -503,6 +794,10 @@ namespace Game
             skin2B = false;
             skin3B = false;
             skin4B = false;
+            skin5B = false;
+            skin6B = false;
+            skin7B = false;
+            skin8B = false;
             this.Skin1Ch();
             CoinCounter.Text = "Coins: " + coinsCount;
         }
